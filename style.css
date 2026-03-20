@@ -10,19 +10,14 @@
     height: 800px;
 }
 
-.square {
-    width: 34px;
-    height: 34px;;
-    border: 2px lightblue solid;
-}
 
 .button{
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .grid{
     border: 2px lightblue solid;
-    gap: 2px;
 }

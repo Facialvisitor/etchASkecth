@@ -36,7 +36,15 @@ function newGrid(input){
     
 
         grid.addEventListener("mouseover", () => {
-            grid.style.backgroundColor = randomRGB()
+            if (grid.style.backgroundColor === ""){
+                grid.style.backgroundColor = randomRGB()
+                grid.style.opacity = 0.1
+            } else {
+                let current = parseFloat(grid.style.opacity)
+                if (current < 1){
+                    grid.style.opacity = current + 0.1
+                }
+            }
         })
         container.appendChild(grid)
     }
