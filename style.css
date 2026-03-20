@@ -16,3 +16,13 @@
     border: 2px lightblue solid;
 }
 
+.button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid{
+    border: 2px lightblue solid;
+    gap: 2px;
+}
