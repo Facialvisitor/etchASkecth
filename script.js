@@ -1,18 +1,6 @@
 let container = document.querySelector(".container")
 
-function createGrid() {
-    for (let i = 0; i < 256; i++){
-        let square = document.createElement("div")
-        square.classList.add("square")
-
-    square.addEventListener("mouseover", () =>{
-    square.style.backgroundColor = "black"
-})
-    container.appendChild(square)
-}
-}
-
-createGrid()
+newGrid(16)
 
 let buttonContainer = document.createElement("div")
 container.before(buttonContainer)
@@ -48,11 +36,18 @@ function newGrid(input){
     
 
         grid.addEventListener("mouseover", () => {
-            grid.style.backgroundColor = "pink"
+            grid.style.backgroundColor = randomRGB()
         })
         container.appendChild(grid)
     }
 
+}
+
+function randomRGB(){
+    let r = Math.floor(Math.random()* 256)
+    let g = Math.floor(Math.random()* 256)
+    let b = Math.floor(Math.random()* 256)
+    return `rgb(${r}, ${g}, ${b})`
 }
   
 
